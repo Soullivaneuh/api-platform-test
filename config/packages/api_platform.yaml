@@ -1,3 +1,22 @@
 api_platform:
+    title: Test API API
+    description: |
+        API to read and write data for your account.
+    version: 0.1
+    enable_entrypoint: false
+    enable_fos_user: true
+    collection:
+        pagination:
+            items_per_page: 100
     mapping:
-        paths: ['%kernel.project_dir%/src/Entity']
+        paths:
+            - '%kernel.project_dir%/src/Entity'
+    formats:
+        json:
+            mime_type: 'application/json'
+        yml:
+            mime_type: 'application/yaml'
+        yaml:
+            mime_type: 'application/yaml'
+        html:
+            mime_type: 'text/html'
